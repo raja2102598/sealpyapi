@@ -3,6 +3,8 @@ from seal import *
 from seal_helper import *
 import numpy as np
 import sqlite3,json
+
+
 app = Flask(__name__)
     
 @app.route('/')
@@ -49,4 +51,4 @@ def example():
     print(str(encoder.decode_int64(result)))
     # str(encoder.decode_int32(plain_result)) + "...... Correct.")
     # return str(encoder.decode_int32(plain_result))
-    return "hello"
+    return (str(encoder.decode_int64(result)))
