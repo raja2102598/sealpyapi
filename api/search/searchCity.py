@@ -29,9 +29,8 @@ import time
 
 validate_searchCity = RequestParser(bundle_errors=True)
 validate_searchCity.add_argument('userid', type=str, required=True, help='userid is required')
-
 validate_searchCity.add_argument('city1', type=str, required=True, help='city1 is required')
-validate_searchCity.add_argument('city', type=str, required=True, help='city1 is required')
+validate_searchCity.add_argument('city', type=str, required=True, help='city is required')
 
 class searchCity(Resource):
     def post(self):
